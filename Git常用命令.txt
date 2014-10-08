@@ -13,6 +13,8 @@ git push -u origin master
 git remote add origin git@github.com:lyb411/book.git
 git push -u origin master
 
+#git remote rm origin
+
 
 Git 是一个很强大的分布式版本控制系统。它不但适用于管理大型开源软件的源代码，管理私人的文档和源代码也有很多优势。
 Git常用操作命令：

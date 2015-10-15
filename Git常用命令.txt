@@ -1,6 +1,94 @@
 or create a new repository on the command line
+一、基础配置
+    1、下面演示一下git的基本操作，高级功能可以自行查阅文档。
+        演示账号：liguibing
+        密码：xxxx
+        git检出地址：liguibing@123.57.224.16:/mnt/git/nbfy_pc_www.git
+
+2、电脑上第一次使用咱们的代码库时需要配置一下个人信息，如下（必须配置）：
+        git config --global user.name "liguibing"
+        git config --global user.email "liguibing@nbfanyi.com"
 
 
+二、检出代码 
+    1、查看分支名称列表(clone之后执行)：
+        git branch -r
+
+    2.0、检出代码(master分支)：
+        git clone liguibing@123.57.224.16:/mnt/git/nbfy_pc_www.git master
+
+    2.1、检出代码(liguibing_user_photo分支)：
+        git clone liguibing@123.57.224.16:/mnt/git/nbfy_pc_www.git liguibing_user_photo
+
+三、同步线上代码到本地
+   #更新代码，主要是让代码保持最新的代码，分别操作：更新代码、查看状态、最近更新人
+        git pull
+        git status 
+        git log
+
+    #切换当前分支到：liguibing_user_test：
+            git checkout liguibng_user_test
+
+     #查看当前所在分支：
+           git branch
+
+        注意：每次修改代码之前一定要更新(git pull)一下，否则容易产生冲突或覆盖别人的代码。
+
+四、修改提交代码 
+    1、查看状态，看看那些文件被修改了，那些文件是新增的(需要进入刚刚clone的项目中)：
+        git status
+
+    2、查看最近提交记录：
+        git log
+
+    3、添加修改、添加的文件：
+        #单个文件逐步添加
+            git add xxx.java 
+            git add man.java 
+
+        #添加所有改动的文件：
+            git add  .  或者使用  git add -a
+
+    4、提交文件：
+        git commit -m "本次修改的备注，如修改了用户头像不展示问题"
+
+    5、推送的远程仓库分支：
+        #将代码推送到 liguibing_user_photo 分支，可以把 liguibing_user_photo 换成你想要推送的任何分支
+        git push -u origin liguibing_user_photo
+
+        #注意：禁止将代码直接推送到master主干上，只能推送到分支。
+
+五、创建分支
+    #创建一个liguibing_pc_help的分支：
+        git checkout -b liguibing_pc_help
+
+    #切分支，从当前分支切换到 liguibing_pc_help
+        git checkout liguibing_pc_help
+
+    #将新分支(liguibing_pc_help)推送到远程服务器：
+        git push origin liguibing_pc_help
+
+
+六、分支合并
+    1、将当期分支合并到master，也可以合并到指定的分支：
+        git branch
+        git pull 
+        git checkout master
+
+    #将liguibing_pc_help分支合并到master分支：
+        git checkout master
+        git merge liguibing_pc_help
+
+    #合并后推送到原创服务器
+        git push -u origin master
+
+
+
+
+
+
+
+===========================================================================
 touch README.md
 git init
 git add README.md

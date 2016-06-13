@@ -1,17 +1,17 @@
 ### 第三方登陆
-https://github.com/SocialiteProviders
++ https://github.com/SocialiteProviders
 
 ### 第三方支付
-http://omnipay.thephpleague.com/
-https://github.com/thephpleague/omnipay
-https://github.com/overtrue
-https://github.com/huanghua581
++ http://omnipay.thephpleague.com/ <br/>
++ https://github.com/thephpleague/omnipay <br/>
++ https://github.com/overtrue <br/>
++ https://github.com/huanghua581 <br/>
 
 ### Laravel 5.1 基础教程
-http://laravelacademy.org/post/153.html
++ http://laravelacademy.org/post/153.html  <br/>
 
-http://laravelacademy.org/laravel-tutorial-5_1
 ### Laravel 精选资源大全（持续更新）
++ http://laravelacademy.org/laravel-tutorial-5_1
 <blockquote>来自Laravel生态系统的精选资源大全，包括书签、包、教程、视频以及其它诸多很酷的资源。</blockquote>
 对应GitHub地址：<a href="https://github.com/nonfu/awesome-laravel" target="_blank">https://github.com/nonfu/awesome-laravel</a>，更多Laravel中文学习资源，请关注：<a href="http://laravelacademy.org">Laravel学院</a>
 <h3><a id="user-content-必备品" class="anchor" href="https://github.com/nonfu/awesome-laravel#%E5%BF%85%E5%A4%87%E5%93%81"></a>必备品</h3>

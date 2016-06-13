@@ -1,3 +1,12 @@
+### 第三方登陆
+https://github.com/SocialiteProviders
+
+### 第三方支付
+http://omnipay.thephpleague.com/
+https://github.com/thephpleague/omnipay
+https://github.com/overtrue
+https://github.com/huanghua581
+
 ### Laravel 5.1 基础教程
 http://laravelacademy.org/post/153.html
 

@@ -1,6 +1,6 @@
 # find 文件查找
 ### find [PATH] [option] [action]
-* 查找/home/wiki目录下所有.conf文件：grep -R --include="*.conf" "baike_wikiaudit" /home/wiki 
+* 查找/home/wiki目录下所有包含baike_wikiaudit字符串 .conf文件：grep -R --include="*.conf" "baike_wikiaudit" /home/wiki 
 
 * 查找并输出内容: find 要查找的目录 -name "关键字" -printf  
 *  所有为 .conf 的文件: find 要查找的目录 -name "*.conf" 

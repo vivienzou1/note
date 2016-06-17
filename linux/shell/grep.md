@@ -15,6 +15,10 @@ R  	 按目录递归查找
 ```
 ### 目录文件中查找
 	grep -R --include="*.conf" "关键字" /home/wiki 
+	
+### 查找当前目录下的所有china关键字
+	grep -R 'china' * 
+	grep 'china' *
 
 ### 在目录中递归搜索关键字
 	grep -R "关键字" /home/wiki/
@@ -22,7 +26,7 @@ R  	 按目录递归查找
 ### 搜索app关键词
 	grep -o -P "APP" /home/work/liguibing/test/a.txt 
 	grep -in "APP" /home/work/liguibing/test/a.txt 
-    
+ 
 ### 多次查找，即在第一次结果中继续查找
 	grep -in "APP" a.txt | grep -i 'abc'  
 

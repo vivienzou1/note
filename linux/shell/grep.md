@@ -14,7 +14,7 @@ R  	 按目录递归查找
 注：不加参数默认是输出匹配的行，grep支持正则表达式
 ```
 ### 目录文件中查找
-	grep -R --include="*.conf" "baike_wikiaudit" /home/wiki 
+	grep -R --include="*.conf" "关键字" /home/wiki 
 
 ### 在目录中递归搜索关键字
 	grep -R "关键字" /home/wiki/

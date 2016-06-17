@@ -19,6 +19,8 @@ R  	 按目录递归查找
 ### 查找当前目录下的所有china关键字
 	grep -R 'china' * 
 	grep 'china' *
+	grep -R 'china' /home/work/code
+	grep 'china' /home/liguibing/php
 
 ### 在目录中递归搜索关键字
 	grep -R "关键字" /home/wiki/

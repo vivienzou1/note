@@ -16,7 +16,9 @@
 分解passwd文件，格式：
 user1:501:501:/home/user1:/bin/bash
 显然可以用：作为域分隔符，命令：
-awk -F: '{print "userName:" $1}' /etc/passwd  #输出用户名
+awk -F ':' '{print "userName:" $1}' /etc/passwd  #输出用户名
+awk -F '\t' '{}' 以tab作为分隔符
+awk -F '|' '{}' 以|作为分隔符
 ```
 ### 文本头、尾表达式
 ```

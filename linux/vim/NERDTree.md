@@ -21,6 +21,8 @@
         let NERDTreeShowBookmarks=1 "显示书签
         let NERDTreeMinimalUI=1 "不显示帮助面板
         let NERDTreeDirArrows=1 "目录箭头 1 显示箭头  0传统+-|号
+        let NERDTreeShowLineNumbers=1 "显示行号
+	let NERDTreeAutoDeleteBuffer=1 "删除文件时自动删除文件对应bufferlet
     "}
 ## 我的配置
 	" NERDTress File highlighting

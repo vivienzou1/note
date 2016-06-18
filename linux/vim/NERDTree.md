@@ -14,7 +14,8 @@
 	 "NERDTree{
         map <F1> :NERDTreeToggle<CR>
         map <C-F1> :NERDTreeFind<CR>
-		 aotucmd aotucmd * aotucmd " 打卡vim时自动开启nerdtree插件
+        
+	autocmd vimenter * NERDTree " 打卡vim时自动开启nerdtree插件
         let NERDTreeChDirMode=2  "选中root即设置为当前目录
         let NERDTreeQuitOnOpen=0 "打开文件时开启树
         let NERDTreeShowBookmarks=1 "显示书签

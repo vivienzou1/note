@@ -18,17 +18,18 @@
 ### 语法
 	rsync -avz -e "ssh -p $portNumber" user@remoteip:/path/to/files/ /local/path/
 ### 将远程/wwwroot/nbfy_pc目录同步到本地/tmp目录下
-	rsync -av -e ssh liguibing@123.57.224.16:/wwwroot/nbfy_pc  /tmp
+	rsync -avz -e ssh liguibing@123.57.224.16:/wwwroot/nbfy_pc  /tmp
 	ps: 文件夹后面加 nbfy_pc/ 是同步文件夹下的所有文件，如果是 nbfy_pc ,则是同步这个目录及目录下的所有文件
 ###下载(端口)
-	rsync -av -e ssh -p8099 liguibing@123.57.224.16:/wwwroot/nbfy_pc  /tmp
+	rsync -avz -e "ssh -p 8099" liguibing@123.57.224.16:/wwwroot/nbfy_pc  /tmp
+	rsync -avz -e "ssh -p 27016"  root@45.78.46.90:/home/wwwroot/default/html.tar.gz /Users/liguibing/work/code/
 ### 本地同步，将目录 /home/liguibing 同步到 /tmp/liguibing
-	rsync -av /home/liguibing/ /tmp/liguibing/
+	rsync -avz /home/liguibing/ /tmp/liguibing/
 ### 上传文件
-	rsync -av  /home/liguibing/work/doc -e  ssh liguibing@123.57.36.107:/tmp/test
+	rsync -avz  /home/liguibing/work/doc -e  ssh liguibing@123.57.36.107:/tmp/test
 
 ### 上传文件(端口)
-	rsync -av  /home/liguibing/work/doc -e  ssh  -p80      liguibing@123.57.36.107:/tmp/test
+	rsync -avz  /home/liguibing/work/doc -e  ssh  -p80      liguibing@123.57.36.107:/tmp/test
 
 # scp
 ***

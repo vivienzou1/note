@@ -15,8 +15,12 @@
 	-z ：在数据传输时，加上压缩的参数！
 	-e ：使用的信道协议，例如使用 ssh 通道，则 -e ssh
 	-a ：相当于 -rlptgoD ，所以这个 -a 是最常用的参数了
-### 语法
-	rsync -avz -e "ssh -p $portNumber" user@remoteip:/path/to/files/ /local/path/
+### 语法（端口）
+	rsync -avz -e "ssh -p $portNumber" user@remoteip:/path/to/files/ /local/path/  下载
+	rsync -avz /local/path/ -e "ssh -p $portNumber" user@remoteip:/path/to/files/   上传
+### 语法（端口）
+	rsync -avz -e ssh user@remoteip:/path/to/files/ /local/path/	下载
+	rsync -avz /local/path/ -e ssh user@remoteip:/path/to/files/ 	上传
 ### 将远程/wwwroot/nbfy_pc目录同步到本地/tmp目录下
 	rsync -avz -e ssh liguibing@123.57.224.16:/wwwroot/nbfy_pc  /tmp
 	ps: 文件夹后面加 nbfy_pc/ 是同步文件夹下的所有文件，如果是 nbfy_pc ,则是同步这个目录及目录下的所有文件

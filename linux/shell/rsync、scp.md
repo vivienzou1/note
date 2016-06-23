@@ -27,9 +27,9 @@
 	rsync -avz /home/liguibing/ /tmp/liguibing/
 ### 上传文件
 	rsync -avz  /home/liguibing/work/doc -e  ssh liguibing@123.57.36.107:/tmp/test
-
 ### 上传文件(端口)
-	rsync -avz  /home/liguibing/work/doc -e  ssh  -p80      liguibing@123.57.36.107:/tmp/test
+	rsync -avz  /home/liguibing/work/doc -e "ssh  -p80 "   liguibing@123.57.36.107:/tmp/test
+	rsync -avz /home/liguibing/code/show.php -e "ssh -p 27016" root@45.78.46.90:/home/liguibing/code
 
 # scp
 ***

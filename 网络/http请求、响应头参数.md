@@ -2,9 +2,17 @@
 ### General (常规)
 + Request URL:https://www.baidu.com/ (请求地址)
 
-+ Request Method:GET (请求方式)
++ Request Method:GET (请求方式:GET、POST、HEAD、PUT、DELETE)
 
 + Status Code:200 OK  (状态)
+
+```html
+	100-199 用于指定客户端应相应的某些动作;
+	200-299 用于表示请求成功;
+	300-399 用于已经移动的文件并且常被包含在定位头信息中指定新的地址信息;
+	400-499 用于指出客户端的错误;
+	500-599 用于支持服务器错误。
+```
 
 + Remote Address:220.181.112.244:443 (指定请求的服务器的域名和端口号)
 

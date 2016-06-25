@@ -1,3 +1,4 @@
+
 Headers 标题：
 #  H1
 ##  H2
@@ -201,19 +202,18 @@ $(function(){
 ```
 ##### 返回值
 | 参数名 | 类型 | 描述 |
-| -- | -- | -- |
+|:------------- |:---------------:| -------------:|
 | code | int | 0 : 成功<br>2-参数不能为空<br>3-系统错误<br>4-未知错误<br>5-系统繁忙  |
 | msg | string | 成功 |
 | data | array | 返回数据 |
 
---- 
-状态码
-0 ：成功
-1 ：号码不能为空
-2 ：分机不能为空
-3 ：请稍后再拨
-4 ：其它错误，详细信息在msg参数中接收
-5 ：其它异常错误，详细信息在msg参数中接收
+
+| Left Aligned  | Center Aligned  | Right Aligned |
+|:------------- |:---------------:| -------------:|
+| col 3 is      | some wordy text |         $1600 |
+| col 2 is      | centered        |           $12 |
+| zebra stripes | are neat        |            $1 |
+
 
 #### 超链接
 [百度](http://www.baidu.com)

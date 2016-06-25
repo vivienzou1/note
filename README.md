@@ -154,17 +154,6 @@ for($i=0;$i<100;$i++){
 
 > AAAA
 
-| 0:0 | 1:0 | 2:0 |
-| -- | -- | -- |
-| 0:2 | 1:2 | 2:2 |
-| 0:3 | 1:3 | 2:3 |
-
-| 姓名 | 年龄 | 地址 |
-| -- | -- | -- |
-| 张三 | 25 | 北京 |
-| admin | 23 | beij |
-| test | 18 | guangzhou |
-| dev | 15 | chaoyang |
 
 ### 接口 demo
 ```javascript
@@ -214,6 +203,11 @@ $(function(){
 | col 2 is      | centered        |           $12 |
 | zebra stripes | are neat        |            $1 |
 
+### 简易表格
+First Header  | Second Header | sdfsd
+------------- | ------------- | ------
+Content Cell  | Content Cell  |  sdfsd
+Content Cell  | Content Cell  | sdfsd
 
 #### 超链接
 [百度](http://www.baidu.com)

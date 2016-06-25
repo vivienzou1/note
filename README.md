@@ -117,3 +117,108 @@ Block Code 代码分组(代码区块)：
 * * *
 - - -
 
+
+# My Awesome Book
+```
+This file file serves as your book's preface, a great place to
+
+describe your book's content and ideas.
+```
+
+### 代码
+***
+```php
+echo time();
+file_put_contents('/tmp/a.txt','hello word');
+for($i=0;$i<100;$i++){
+  echo $i."\n";
+}
+```
+--- 
+
++ A
+* B
+1. C
+
+**加粗**
+
+~~删除线~~
+
+> 第一级
+> > 第二级
+> > > 第三级
+
+> > 第一级
+> > 第二级
+
+> AAAA
+
+| 0:0 | 1:0 | 2:0 |
+| -- | -- | -- |
+| 0:2 | 1:2 | 2:2 |
+| 0:3 | 1:3 | 2:3 |
+
+| 姓名 | 年龄 | 地址 |
+| -- | -- | -- |
+| 张三 | 25 | 北京 |
+| admin | 23 | beij |
+| test | 18 | guangzhou |
+| dev | 15 | chaoyang |
+
+### 接口 demo
+```javascript
+$(function(){
+    
+   $("#btnCall").click(function () {   
+       var extension="8006";//用户使用的分机，应在页面加载是赋值。
+       var phone = $("#phone").val();
+       var url =  "http://192.168.1.240:8080/index.php?m=api&a=clickCall&extension="+extension+"&phone="+phone;
+       $.ajax({
+            url:       url,
+            type:       "get",        
+            dataType:   "json",        
+            data:       "",
+            success:    function(data) {
+                console.log(data);
+                if(data.error==0){
+                    alert('外呼成功,录音文件是:'+data.msg);
+                    var reocrding_fiel_uuid = data.msg;
+                    //成功时返回此次呼叫的录音文件名，可以将此存放数据报错，用于关联通话录音
+                    //此处省略存储录音文件名的操作....
+                }else{
+                    alert('外呼失败，详细信息：'+data.msg);
+                }
+            },
+            
+            error: function(ev) {
+                alert("ajax fail!");
+            }
+        });
+
+   });    
+
+});
+```
+##### 返回值
+| 参数名 | 类型 | 描述 |
+| -- | -- | -- |
+| code | int | 0 : 成功<br>2-参数不能为空<br>3-系统错误<br>4-未知错误<br>5-系统繁忙  |
+| msg | string | 成功 |
+| data | array | 返回数据 |
+
+--- 
+状态码
+0 ：成功
+1 ：号码不能为空
+2 ：分机不能为空
+3 ：请稍后再拨
+4 ：其它错误，详细信息在msg参数中接收
+5 ：其它异常错误，详细信息在msg参数中接收
+
+#### 超链接
+[百度](http://www.baidu.com)
+
+![地球](http://img4.imgtn.bdimg.com/it/u=2314193465,2957208021&fm=21&gp=0.jpg)
+
+
+

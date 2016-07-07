@@ -31,6 +31,8 @@
 ### 上传文件
 ```
 curl --form "fileupload=@/home/wwwroot/default/html.tar.gz"  http://123.57.36.107/test.php
+显示上传速度：
+curl -O --form "fileupload=@/home/wwwroot/default/html.tar.gz" http://123.57.36.107/test.php
 ```
 
 ### Usage

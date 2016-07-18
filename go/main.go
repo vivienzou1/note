@@ -34,7 +34,13 @@ type (
 )
 
 //结构体声明
+type comms struct {
+	pak string
+	num int
+}
+
 type persons struct {
+	comms    //嵌入结构体
 	userName string
 	age      int
 }
@@ -55,7 +61,16 @@ func main() {
 	//sliceDemo()
 	//mapDemo()
 	//functions()
-	structDemo()
+	//structDemo()
+	//time.Sleep(1 * time.Second) //暂停2秒
+
+	//并发
+	c := make(chan bool)
+	go func() {
+		fmt.Println("A")
+		c <- true
+	}()
+	<-c
 }
 
 //输出
@@ -547,14 +562,14 @@ func structDemo() {
 	*/
 
 	//更简洁的赋值
-	b := persons{
+	/*b := persons{
 		userName: "admin",
 		age:      30,
 	}
-	fmt.Println(b)
+	fmt.Println(b)*/
 
 	//匿名结构体
-	c := struct {
+	/*c := struct {
 		number  int
 		address string
 	}{
@@ -562,9 +577,20 @@ func structDemo() {
 		address: "中关村",
 	}
 	fmt.Println(c.address)
+	*/
 
 	//嵌入结构
 	//初始化： 原始结构体名称:原始结构体名称{sex:30}
 	//赋值：   当前结构体名称.sex = 13
+	d := persons{}
+	d.age = 3
+	d.pak = "admin"
+	d.num = 30
+	fmt.Println(d.num)
 
+}
+
+//并发
+func Gos() {
+	fmt.Println("A")
 }

@@ -13,8 +13,9 @@ import (
 //显式类型定义,全局
 const number int = 30
 const (
-	userName = "admin"
-	age      = "30"
+	userName 	= "admin"
+	address string  = "中关村"
+	age      	= "30"
 )
 
 //全局变量

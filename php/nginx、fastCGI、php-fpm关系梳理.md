@@ -19,3 +19,7 @@ nginx、fastCGI、php-fpm关系梳理
 ## 参考文章：
   实战Nginx与PHP（FastCGI）的安装、配置与优化  （文章有非常详细的原理分析和配置参数说明，强烈推荐阅读）
   http://ixdba.blog.51cto.com/2895551/806622
+
+## nginx、fastcgi(php-fpm)运行原理：
+  internet -> socket(ip或sock文件)->FastCgi(php-fpm)->PHP
+

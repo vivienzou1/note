@@ -13,6 +13,9 @@ show tables;--查看该数据库下所有表
 show create table tname;--查看表的详细结构
 show full processlist;--查看所有进程(show processlist;)
 
+alias mysql61='/home/work/local/mysql/bin/mysql -uadmin -p'\''lsdfsbing!@#$%'\'' -h 10.3.250.61 -P3306 haibian --default-character-set=utf8 -A'
+alias mysql62='/home/work/local/mysql/bin/mysql -uadmin -p'\''sdfsdfsn!@#$%'\'' -h 10.3.250.62 -P3306 haibian --default-character-set=utf8 -A'
+
 drop table tname;--删除表
 drop database dbname;--删除数据库
 delete from tname;--清空表，慢

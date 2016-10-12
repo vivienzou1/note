@@ -12,3 +12,16 @@
   export bee=/home/wwwroot/open/go/beego/bin
 ###导入环境变量
 export PATH=$PATH:$GOROOT/bin:$GOPATH:$bee
+
+###sublime设置
+```
+要对Gosublime进行配置 比如我的 Gosublime.sublime-settings
+
+{
+    "env": 
+    { 
+        "GOPATH": "$HOME/golang",
+        "GOROOT": "$HOME/bin/go"
+    }
+}
+```

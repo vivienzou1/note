@@ -33,7 +33,8 @@
     增加： 
     JAVA_HOME=/usr/java/jdk1.xxx
     CLASSPATH=$JAVA_HOME/lib/
-    PATH=$PATH:$JAVA_HOME/bin
+    PATH=$PATH:$JAVA_HOME/bin:$CLASSPATH
+	export PATH
  ```
 ### 视频教程
 http://www.jikexueyuan.com/course/1716_3.html?ss=1

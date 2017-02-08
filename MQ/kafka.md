@@ -11,3 +11,7 @@
   4、生产者(Producer)：向broker发布消息的客户端应用程序；
   
   5、AMQP服务器端(broker)：用来接收生产者发送的消息并将这些消息路由给服务器的队列；
+  
+  
+
+http://www.jikexueyuan.com/course/1716_3.html?ss=1

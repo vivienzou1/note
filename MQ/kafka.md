@@ -25,7 +25,20 @@
 ### 安装(jdk->zookeeper->kafka)
   1、jdk
   
-    dddd
-  
+    解压：tar -zxvf jdk-xxx-linux-x64.tar.gz
+    
+    移动目录：将解压的sdk目录copy到/usr/java/目录下
+  
+    设置环境变量：vim ~/.basshrc 
+    <br>增加： 
+    <br>JAVA_HOME=/usr/java/jdk1.xxx
+    <br>CLASSPATH=$JAVA_HOME/lib/
+    <br>PATH=$PATH:$JAVA_HOME/bin
+  
 ### 视频教程
 http://www.jikexueyuan.com/course/1716_3.html?ss=1
+
+
+
+
+export PATH JAVA_HOME CLASSPATH

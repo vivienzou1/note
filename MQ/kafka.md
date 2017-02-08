@@ -32,10 +32,9 @@
   
     设置环境变量：vim ~/.basshrc 
     增加： 
-    JAVA_HOME=/usr/java/jdk1.xxx
-    CLASSPATH=$JAVA_HOME/lib/
-    PATH=$PATH:$JAVA_HOME/bin:$CLASSPATH
-	export PATH
+    JAVA_HOME=/usr/local/java/jdk1.8.0
+	CLASSPATH=$JAVA_HOME/lib/
+	export PATH=$PATH:/usr/local/go/bin:$JAVA_HOME/bin:$CLASSPATH
 	source ~/.basshrc 
  ```
 

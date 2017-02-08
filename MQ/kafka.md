@@ -21,7 +21,11 @@
     
   3、kafka：
     http://kafka.apache.org/downloads
-  
 
+### 安装(jdk->zookeeper->kafka)
+  1、jdk
+  
+    dddd
+  
 ### 视频教程
 http://www.jikexueyuan.com/course/1716_3.html?ss=1

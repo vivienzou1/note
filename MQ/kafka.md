@@ -13,14 +13,14 @@
   5、AMQP服务器端(broker)：用来接收生产者发送的消息并将这些消息路由给服务器的队列；
   
 ### 所需软件
-  1、jdk
-    http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+  1、jdk：
+    http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
     
-  2、zookeeper
-    http://www.apache.org/dyn/closer.cgi/zookeeper/
+  2、zookeeper：
+    http://www.apache.org/dyn/closer.cgi/zookeeper/
     
-  3、kafka
-    http://kafka.apache.org/downloads
+  3、kafka：
+    http://kafka.apache.org/downloads
   
 
 ### 视频教程

@@ -23,7 +23,8 @@
     http://kafka.apache.org/downloads
 
 ### 安装(jdk->zookeeper->kafka)
-  1、jdk
+1、jdk
+
 ```
     解压：tar -zxvf jdk-xxx-linux-x64.tar.gz
     
@@ -35,7 +36,23 @@
     CLASSPATH=$JAVA_HOME/lib/
     PATH=$PATH:$JAVA_HOME/bin:$CLASSPATH
 	export PATH
+	source ~/.basshrc 
  ```
+
+2、zookeeper安装
+
+```
+	解压：tar -zxvf zookeeper-3.4.8.tar.gz
+	cd zookeeper-3.4.
+	
+```
+
 ### 视频教程
 http://www.jikexueyuan.com/course/1716_3.html?ss=1
+
+
+
+
+
+
 

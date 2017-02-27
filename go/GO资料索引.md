@@ -1,6 +1,7 @@
 Go 语言学习资料与社区索引
 ==============
 
+## https://www.zhihu.com/question/23486344
 
 鉴于之前有人做的 [索引资料](https://github.com/wonderfo/wonderfogo/wiki) 已经过期超过 2 年，所以特开此坑。各位同学可以通过发起 Fork + Pull Request 的方式进行补充和更新。
 

@@ -1,4 +1,7 @@
 demo数据：
+
+    https://www.cnhzz.com/web_logs/
+
 awk练习数据.txt
 forsh all ci ssh "cd /home/wiki/odp/log/ && grep -F '77308535' commitsql.20140820 | grep -F '2014-08-20 14'"
 查找文件 find

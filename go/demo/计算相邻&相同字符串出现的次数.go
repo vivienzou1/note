@@ -30,6 +30,10 @@ func main() {
 			newStr = newStr + tmp
 		}
 	}
-
+	//将string转换为int
+	/*var numStr string = "89"
+	if v, err := strconv.Atoi(numStr); err == nil {
+		fmt.Printf("i=%d, type: %T\n", v, v)
+	}*/
 	fmt.Println(newStr)
 }

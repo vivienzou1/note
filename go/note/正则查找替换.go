@@ -19,5 +19,5 @@ func main() {
 	fmt.Println(r.FindAllString("ABC43434 KJHFDK888", expCount))
 
 	//regexp 包也可以用来替换部分字符串为其他值
-	fmt.Println(r.ReplaceAllString("ABC43434 KJHFDK888", "K"))
+	fmt.Println(r.ReplaceAllString("ABC43434 KJHFDK888", "new string"))
 }

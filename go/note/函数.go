@@ -59,12 +59,27 @@ type UserInfo struct {
 	userName string
 }
 
+type Address struct {
+	city    string
+	zipcode int
+	info    string
+}
+
 func main() {
 	u := &UserInfo{"admin"}
 	name, num := u.Info()
 	fmt.Println(name, num)
+
+	d := &Address{"北京", 10086, "望京soho"}
+	zipcode, cityInfo := d.AddInfo()
+	fmt.Println(zipcode, cityInfo)
+
 }
 
 func (u *UserInfo) Info() (string, int) {
 	return u.userName + "你好", 520
+}
+
+func (d *Address) AddInfo() (int, string) {
+	return d.zipcode, d.city + d.info
 }

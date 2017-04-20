@@ -47,3 +47,24 @@ func H(a *int) {
 	*a = 2
 	fmt.Println(*a)
 }
+
+//demo2
+package main
+
+import (
+	"fmt"
+)
+
+type UserInfo struct {
+	userName string
+}
+
+func main() {
+	u := &UserInfo{"admin"}
+	fmt.Println(u.Info())
+}
+
+func (u *UserInfo) Info() string {
+	return u.userName + "你好"
+}
+

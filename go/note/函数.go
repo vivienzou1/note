@@ -61,10 +61,10 @@ type UserInfo struct {
 
 func main() {
 	u := &UserInfo{"admin"}
-	fmt.Println(u.Info())
+	name, num := u.Info()
+	fmt.Println(name, num)
 }
 
-func (u *UserInfo) Info() string {
-	return u.userName + "你好"
+func (u *UserInfo) Info() (string, int) {
+	return u.userName + "你好", 520
 }
-

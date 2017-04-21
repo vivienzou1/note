@@ -10,6 +10,24 @@ func init() {
 }
 
 func main() {
+	//字符串连接
+	str1 := "ABDSF"
+	str2 := "kfjsdf"
+	str := str1+str2;
+	fmt.Println(str)
+	
+	//修改字符串某个值
+	ss := "ABC"
+	ss = "N" + ss[1:] //修改第一个字符串，字符串虽不能更改，但可进行切片操作
+	fmt.Println(ss)
+	
+	//修改字符串，方法2
+	s := "hello"
+	c := []byte(s)  // 将字符串 s 转换为 []byte 类型
+	c[0] = 'c'
+	s2 := string(c)  // 再转换回 string 类型
+	fmt.Printf("%s\n", s2)
+	
 	//判断字符串是否以hell开头,结尾函数用：HasSuffix
 	str := strings.HasPrefix("hello word", "hell")
 	fmt.Printf("%v\n", str)

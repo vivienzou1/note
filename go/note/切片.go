@@ -3,6 +3,10 @@ func sliceDemo() {
 	//定义一个切片
 	//var a []int
 	//fmt.Println(a)
+	
+	//切片还实用于字符串
+	str := "ABCDEF"
+	fmt.Println(str[2:])
 
 	/*b := [10]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 	//fmt.Println(b) //[1 2 3 4 5 6 7 8 9 10]

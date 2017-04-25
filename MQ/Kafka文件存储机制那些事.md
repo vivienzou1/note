@@ -134,6 +134,7 @@ Kafka高效文件存储设计特点
 
 参考
 1.[Linux Page Cache机制](http://blog.csdn.net/thewayma/article/details/4287170)
+
 2.[Kafka官方文档](http://kafka.apache.org/documentation.html#introduction)
 
 

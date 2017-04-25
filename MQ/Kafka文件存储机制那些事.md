@@ -1,3 +1,4 @@
+
 # Kafka是什么
 > Kafka是最初由Linkedin公司开发，是一个分布式、分区的、多副本的、多订阅者，基于zookeeper协调的
 > 分布式日志系统(也可以当做MQ系统)，常见可以用于web/nginx日志、访问日志，消息服务等等，Linkedin于2010年
@@ -132,9 +133,17 @@ Kafka高效文件存储设计特点
 * 通过index元数据全部映射到memory，可以避免segment file的IO磁盘操作。
 * 通过索引文件稀疏存储，可以大幅降低index文件元数据占用空间大小。
 
-参考
+[原文地址](http://tech.meituan.com/kafka-fs-design-theory.html)
+
+参考：
+
 1.[Linux Page Cache机制](http://blog.csdn.net/thewayma/article/details/4287170)
 
 2.[Kafka官方文档](http://kafka.apache.org/documentation.html#introduction)
+
+3.[apache kafka系列之server.properties配置文件参数说明](http://blog.csdn.net/lizhitao/article/details/25667831)
+
+4.[ Kafka集群partitions/replicas默认分配解析](http://blog.csdn.net/lizhitao/article/details/41778193)
+
 
 

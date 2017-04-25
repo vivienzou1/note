@@ -1,3 +1,4 @@
+### [转载](http://tech.meituan.com/kafka-fs-design-theory.html)
 
 # Kafka是什么
 > Kafka是最初由Linkedin公司开发，是一个分布式、分区的、多副本的、多订阅者，基于zookeeper协调的

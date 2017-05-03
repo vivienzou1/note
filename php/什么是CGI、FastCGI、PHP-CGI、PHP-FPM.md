@@ -50,6 +50,6 @@
 
 ### 什么是PHP-FPM
 
-+ PHP-FPM是一个PHP FastCGI管理器，是只用于PHP的,可以在 [](http://php-fpm.org/download)下载得到.
++ PHP-FPM是一个PHP FastCGI管理器，是只用于PHP的,可以在 [http://php-fpm.org/download](http://php-fpm.org/download)下载得到.
 
 + PHP-FPM其实是PHP源代码的一个补丁，旨在将FastCGI进程管理整合进PHP包中。必须将它patch到你的PHP源代码中，在编译安装PHP后才可以使用。

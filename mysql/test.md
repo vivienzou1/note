@@ -1,4 +1,4 @@
-## YII WEB应用之sql操作
+## YII SQL安全操作
 
 
 ### 一、目的：
@@ -85,3 +85,23 @@ $row = $this->find($command);
     
 ### 三，约束
 > yii操作db方式方法很多，不管使用哪一种，在CURD的时候，一定要预处理
+
+### 四、项目中操作存在sql注入栗子
+
+#####  A：
+![](http://img2.soyoung.com/upload/20170508/8/20170508213447571.png)
+
+#####  B：
+![](http://img2.soyoung.com/upload/20170508/2/20170508213638547.png)
+
+#####  C：
+![](http://img2.soyoung.com/upload/20170508/6/20170508213655919.png)
+
+#####  D：
+![](http://img2.soyoung.com/upload/20170508/2/20170508213709956.png)
+
+#####  E：
+![](http://img2.soyoung.com/upload/20170508/5/20170508213725461.png)
+
+
+

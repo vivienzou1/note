@@ -81,10 +81,10 @@ $row = $this->find($command);
     参考：[createCommand](http://www.yiiframework.com/doc/api/1.1/CDbCommand)
 
 2、`getCondition操作方法:`
-    参考：[getCondition方式](http://www.yiiframework.com/doc/api/1.1/CDbConnection)
+    参考：[getCondition](http://www.yiiframework.com/doc/api/1.1/CDbConnection)
     
 ### 三，约束
-> yii操作db方式方法很多，不管使用哪一种，在CURD的时候，一定要预处理
+> yii操作db方式方法很多，不管使用哪一种，在CURD的时候，一定要预处理，如果确定接收是int类型时最好强制intval一下，不处理虽然不会造成sql注入问题，但可以增强代码的健壮性。
 
 ### 四、项目中操作存在sql注入栗子
 

@@ -1,15 +1,15 @@
 ### 语法： grep 参数 文件
 ```
-P/E    解释模式作为Perl的正则表达式匹配,P-perl正则，E-egrep命令
-o    仅显示匹配的行，即匹配的内容，如搜索 app ，匹配成功则只显示 app                ，
-i    忽略大小写
-n    输出结果时同时输出该行的行号
-l    从多文件查找时，只输出找到匹配内容的文件名
-h    从多个文件查找时，只输出匹配的内容，不显示文件名
-c    只输出匹配内容的总行数
-v    反向查找，输出匹配内容以外的内容（未匹配的到的内容）
-R/r  按目录递归查找
-F   将范本样式视为固定字符串的列表。
+P/E    解释模式作为Perl的正则表达式匹配,P-perl正则，E-egrep命令       cat abc.txt | grep -P 'ABC(DEF)G[a-z]{0,3}XYZ'
+o    仅显示匹配的行，即匹配的内容，如搜索 abc ，匹配成功则只显示abc内容。cat abc.txt | grep -o 'abc'
+i    忽略大小写         cat abc.txt | grep -i | grep 'Abc' 
+n    输出结果时同时输出该行的行号  cat abc.txt | grep -n 'abc'
+l    从多文件查找时，只输出找到匹配内容的文件名	cat abc.txt | grep -l 'abc'
+h    从多个文件查找时，只输出匹配的内容，不显示文件名  cat abc.txt | grep -h 'abc'
+c    只输出匹配内容的总行数	cat abc.txt | grep -c 'abc'
+v    反向查找，输出匹配内容以外的内容（未匹配的到的内容）		cat abc.txt | grep -v 'abc'
+R/r  按目录递归查找 . cat abc.txt | grep -r 'abc' * 或cat abc.txt | grep -r 'abc' /home/work/code
+F    将范本样式视为固定字符串的列表。	cat abc.txt | grep -F 'abc'
 
 
 注：不加参数默认是输出匹配的行，grep支持正则表达式(加参数P即可)

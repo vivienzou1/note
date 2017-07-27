@@ -8,7 +8,7 @@ l    从多文件查找时，只输出找到匹配内容的文件名	cat abc.txt
 h    从多个文件查找时，只输出匹配的内容，不显示文件名  cat abc.txt | grep -h 'abc'
 c    只输出匹配内容的总行数	cat abc.txt | grep -c 'abc'
 v    反向查找，输出匹配内容以外的内容（未匹配的到的内容）		cat abc.txt | grep -v 'abc'
-R/r  按目录递归查找 . cat abc.txt | grep -r 'abc' * 或cat abc.txt | grep -r 'abc' /home/work/code
+R/r  按目录递归查找 cat abc.txt | grep -r 'abc' * 或 grep -r 'abc' 或 /home/work/code grep -R --include="*.conf" "关键字" /home/wiki 
 F    将范本样式视为固定字符串的列表。	cat abc.txt | grep -F 'abc'
 
 

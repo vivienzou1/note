@@ -24,4 +24,4 @@
 
 ### 批量替换
 * sed -i "s/控制面板/飞吧后台管理系统/g" `grep 控制面板 -rl /data/webroot/wwwroot/admin/resources/views`   将控制面板替换为：飞吧后台管理系统，替换views下的所有文件
-* sed -i "s/N邦电商/NPOLE/g" `grep N邦电商 -rl /mnt/webroot/admin/laravel5.3-admin`
+* sed -i "s/字符串/要替换的字符/g" `grep 字符串 -rl /mnt/webroot/admin/laravel5.3-admin`

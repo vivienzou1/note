@@ -11,6 +11,9 @@ v    反向查找，输出匹配内容以外的内容（未匹配的到的内�
 R/r  按目录递归查找 cat abc.txt | grep -r 'abc' * 或  /home/work/code grep -R --include="*.conf" "关键字" /home/wiki 
 F    将范本样式视为固定字符串的列表。	cat abc.txt | grep -F 'abc'
 
+grep "abc" . -r --exclude "a.php"  #在搜索结果中排除所有包含a.php的文件 
+grep -r -P -n --exclude='a.php' 'abc|1242' work   #在搜索结果中排除a.php文件,这里的a.php可以用正则
+
 
 注：不加参数默认是输出匹配的行，grep支持正则表达式(加参数P即可)
 ```

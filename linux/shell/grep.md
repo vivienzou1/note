@@ -12,7 +12,7 @@ R/r  按目录递归查找 cat abc.txt | grep -r 'abc' * 或  /home/work/code gr
 F    将范本样式视为固定字符串的列表。	cat abc.txt | grep -F 'abc'
 
 grep -r -P -n --exclude='a.php' 'abc|1242' work   #在搜索结果中排除a.php文件检索,这里的文件名可以用正则
-
+```即：包含用 --include='xxx.file'参数，不包含用exclude='xxx.file参数 ```
 
 注：不加参数默认是输出匹配的行，grep支持正则表达式(加参数P即可)
 ```

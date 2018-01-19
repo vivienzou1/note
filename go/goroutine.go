@@ -4,18 +4,23 @@ import "fmt"
 import "time"
 import "math/rand"
 import "runtime"
+import "sync"
 
 var total_tickets int32 = 10
 
+//可简写成：var mutex sync.Mutex
+var mutex = &sync.Mutex{}
+
 func sell_tickets(i int) {
 	for {
+		mutex.Lock()
 		if total_tickets > 0 { //如果有票就卖
 			time.Sleep(time.Duration(rand.Intn(5)) * time.Millisecond)
 			total_tickets-- //卖一张票
 			fmt.Println("id:", i, "  ticket:", total_tickets)
-		} else {
-			break
 		}
+		//加锁，防止卖超
+		mutex.Unlock()
 	}
 }
 

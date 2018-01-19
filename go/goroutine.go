@@ -63,9 +63,9 @@ func sell_tickets(i int) {
 func main() {
 
 	//下面这种会卖超
-	/*for i := 0; i < 5; i++ { //并发5个goroutine来卖票
-	     go sell_tickets(i)
-	}*/
+	//for i := 0; i < 5; i++ { //并发5个goroutine来卖票
+	 //    go sell_tickets(i)
+	//}
 
 	//并发50个goroutine来卖票
 	go func() {

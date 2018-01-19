@@ -25,6 +25,7 @@ func sell_tickets(i int) {
 }
 
 func main() {
+	//多线程
 	runtime.GOMAXPROCS(4)        //我的电脑是4核处理器，所以我设置了4
 	rand.Seed(time.Now().Unix()) //生成随机种子
 

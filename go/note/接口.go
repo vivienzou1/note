@@ -1,3 +1,46 @@
+//------------------------------demo1-------------------------------------
+package main
+
+import (
+	"fmt"
+)
+
+type persion interface {
+	address() string
+}
+
+//城市信息
+type cityInfo struct {
+	city string
+}
+
+//实现cityInfo结构方法
+func (c *cityInfo) address() string {
+	return c.city
+}
+
+//名字
+type info struct {
+	name string
+}
+
+func (i *info) address() string {
+	return i.name
+}
+
+func main() {
+	c := cityInfo{"朝阳望京"}
+	u := info{"张三"}
+	p := []persion{&c, &u}
+
+	for _, sh := range p {
+		fmt.Println(sh.address())
+	}
+
+}
+
+
+//---------------------------demo2---------------------------------------
 package main
 
 import (

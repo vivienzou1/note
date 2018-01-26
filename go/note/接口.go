@@ -33,8 +33,8 @@ func main() {
 	u := info{"张三"}
 	p := []persion{&c, &u}
 
-	for _, sh := range p {
-		fmt.Println(sh.address())
+	for k, sh := range p {
+		fmt.Println(k, sh.address(), p[k])
 	}
 
 }

@@ -12,16 +12,15 @@ type share interface {
 
 //ste 1
 type user struct {
-	age  int
-	year int
+	age int
 }
 
 func (u *user) A() int {
-	return u.age + u.year
+	return u.age
 }
 
 func (u *user) B() int {
-	return (u.age*2 + u.year*2) * 100
+	return u.age + 1
 }
 
 //ste 2
@@ -34,11 +33,11 @@ func (c *city) A() int {
 }
 
 func (c *city) B() int {
-	return c.zipcode + 100
+	return c.zipcode + 1
 }
 
 func test_interface() {
-	u := user{age: 10, year: 2018}
+	u := user{age: 10}
 	c := city{zipcode: 10086}
 
 	s := []share{&u, &c}

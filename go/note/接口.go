@@ -2,6 +2,61 @@ package main
 
 import (
 	"fmt"
+)
+
+//接口、多态
+type share interface {
+	A() int
+	B() int
+}
+
+//ste 1
+type user struct {
+	age  int
+	year int
+}
+
+func (u *user) A() int {
+	return u.age + u.year
+}
+
+func (u *user) B() int {
+	return (u.age*2 + u.year*2) * 100
+}
+
+//ste 2
+type city struct {
+	zipcode int
+}
+
+func (c *city) A() int {
+	return c.zipcode
+}
+
+func (c *city) B() int {
+	return c.zipcode + 100
+}
+
+func test_interface() {
+	u := user{age: 10, year: 2018}
+	c := city{zipcode: 10086}
+
+	s := []share{&u, &c}
+	for k, v := range s {
+		fmt.Println(k, v, v.A(), v.B())
+	}
+}
+
+func main() {
+	test_interface()
+}
+
+
+//---------------------------------demo01--------------------------
+package main
+
+import (
+	"fmt"
 	"math"
 )
 

@@ -122,7 +122,7 @@ IS_DOUBLE -> dvalue
 IS_ARRAY  -> ht
 IS_STRING -> str
 IS_RESOURCE -> lvalue
-``
+```
 
 ### 引用计数(垃圾回收)
 引用计数在内存回收、字符串操作等地方使用非常广泛。PHP中的变量就是引用计数的典型应用。Zval的引用计数通过成员变量is_ref和ref_count实现，通过引用计数，多个变量可以共享同一份数据。避免频繁拷贝带来的大量消耗。

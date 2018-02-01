@@ -5,6 +5,11 @@ import (
 )
 
 func main() {
+	var i int = 1
+	var x *int
+	x = &i
+	fmt.Println(i, &i, x, *x)
+	
 	var i1 = 5
 	//分别打印值和指针地址
 	fmt.Printf("%d, %p \n", i1, &i1) //输出 5, 0xc0420381d0

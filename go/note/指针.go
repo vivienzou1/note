@@ -6,9 +6,10 @@ import (
 
 func main() {
 	var i int = 1
-	var x *int
-	x = &i
-	fmt.Println(i, &i, x, *x)
+	var x *int                //定义一个指针变量
+	x = &i                    //将i的指针地址赋值给x
+	*x = 888                  //通过指针重新赋值
+	fmt.Println(i, &i, x, *x) //i、x最终的值都是888
 	
 	var i1 = 5
 	//分别打印值和指针地址

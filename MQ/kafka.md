@@ -55,5 +55,16 @@ http://www.mamicode.com/info-detail-1213443.html
 
 
 
+作者：半兽人
+链接：http://orchome.com/kafka/index
+来源：OrcHome
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+kafka节点之间如何复制备份的？<br>
+kafka消息是否会丢失？为什么？<br>
+kafka最合理的配置是什么？<br>
+kafka的leader选举机制是什么？<br>
+kafka对硬件的配置有什么要求？<br>
+kafka的消息保证有几种方式？<br>
 
 

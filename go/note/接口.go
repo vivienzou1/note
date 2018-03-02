@@ -2,6 +2,161 @@ package main
 
 import (
 	"fmt"
+)
+
+//接口、多态
+type share interface {
+	A() int
+	B() int
+}
+
+//ste 1
+type user struct {
+	age int
+}
+
+func (u *user) A() int {
+	return u.age
+}
+
+func (u *user) B() int {
+	return u.age + 1
+}
+
+//ste 2
+type city struct {
+	zipcode int
+}
+
+func (c *city) A() int {
+	return c.zipcode
+}
+
+func (c *city) B() int {
+	return c.zipcode + 1
+}
+
+func test_interface() {
+	u := user{age: 10}
+	c := city{zipcode: 10086}
+
+	s := []share{&u, &c}
+	for k, v := range s {
+		fmt.Println(k, v, v.A(), v.B())
+	}
+}
+
+func main() {
+	test_interface()
+}
+
+
+//---------------------------------demo01--------------------------
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+//---------- 接 口 --------//
+type shape interface {
+	area() float64      //计算面积
+	perimeter() float64 //计算周长
+}
+
+//--------- 长方形 ----------//
+type rect struct {
+	width, height float64
+}
+
+func (r *rect) area() float64 { //面积
+	return r.width * r.height
+}
+
+func (r *rect) perimeter() float64 { //周长
+	return 2 * (r.width + r.height)
+}
+
+//----------- 圆  形 ----------//
+type circle struct {
+	radius float64
+}
+
+func (c *circle) area() float64 { //面积
+	return math.Pi * c.radius * c.radius
+}
+
+func (c *circle) perimeter() float64 { //周长
+	return 2 * math.Pi * c.radius
+}
+
+// ----------- 接口的使用 -----------//
+func interface_test() {
+	r := rect{width: 2.9, height: 4.8}
+	c := circle{radius: 4.3}
+
+	s := []shape{&r, &c} //通过指针实现
+
+	for _, sh := range s {
+		fmt.Println(sh)
+		fmt.Println(sh.area())
+		fmt.Println(sh.perimeter())
+	}
+}
+
+func main() {
+	interface_test()
+}
+
+
+//------------------------------demo1-------------------------------------
+package main
+
+import (
+	"fmt"
+)
+
+type persion interface {
+	address() string
+}
+
+//城市信息
+type cityInfo struct {
+	city string
+}
+
+//实现cityInfo结构方法
+func (c *cityInfo) address() string {
+	return c.city
+}
+
+//名字
+type info struct {
+	name string
+}
+
+func (i *info) address() string {
+	return i.name
+}
+
+func main() {
+	c := cityInfo{"朝阳望京"}
+	u := info{"张三"}
+	p := []persion{&c, &u}
+
+	for k, sh := range p {
+		fmt.Println(k, sh.address(), p[k])
+	}
+
+}
+
+
+//---------------------------demo2---------------------------------------
+package main
+
+import (
+	"fmt"
 	"math"
 )
 

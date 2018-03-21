@@ -1,6 +1,17 @@
--- https://coolshell.cn/articles/10739.html
-
 #!/usr/bin/lua
+
+--[[
+# wget http://luajit.org/download/LuaJIT-2.1.0-beta1.tar.gz
+# tar -xvf LuaJIT-2.1.0-beta1.tar.gz
+# cd LuaJIT-2.1.0-beta1
+# make
+# sudo make install
+验证 LuaJIT 是否安装成功
+# luajit -v
+
+Lua 和 LuaJIT 的区别:LuaJIT 的执行速度，即使是其汇编编写的 Lua 解释器，也要比标准 Lua 5.1 解释器快很多，
+可以说是一个高效的 Lua 实现。另一个区别是，LuaJIT 支持比标准 Lua 5.1 语言更多的基本原语和特性，因此功能上也要更加强大。
+--]]
 
 print("hello wrod")
 
@@ -299,10 +310,3 @@ end)()
 -- math:	http://lua-users.org/wiki/MathLibraryTutorial
 -- io:		http://lua-users.org/wiki/IoLibraryTutorial
 -- os:		http://lua-users.org/wiki/OsLibraryTutorial
-
-
-
-
-
-
-

@@ -1,5 +1,5 @@
 
-###第一个lua程序，在nginx配置文件中添加如下:
+第一个lua程序，在nginx配置文件中添加如下:
 ```
 location = /luatest.html{
 		content_by_lua '

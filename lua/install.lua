@@ -1,6 +1,7 @@
 
 --[[
 0、安装依赖：
+	yum update
 	yum install wget
 	yum install pcre
 	yum install openssl*

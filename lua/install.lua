@@ -59,6 +59,9 @@
 7、查看是否安装成功
 	nginx -V
 
-
-
+8、lua nginx redis (https://github.com/openresty/lua-resty-redis#installation)
+	# nginx.conf
+	    http {
+		lua_package_path "/usr/local/nginx/conf/waf/redis/?.lua";
+	    }
 --]]

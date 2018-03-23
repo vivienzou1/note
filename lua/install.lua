@@ -60,6 +60,7 @@
 	nginx -V
 
 8、lua nginx redis (https://github.com/openresty/lua-resty-redis#installation)
+	# 下载：https://raw.githubusercontent.com/openresty/lua-resty-redis/master/lib/resty/redis.lua
 	# nginx.conf
 	    http {
 		lua_package_path "/usr/local/nginx/conf/waf/redis/?.lua";

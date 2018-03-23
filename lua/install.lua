@@ -59,12 +59,11 @@
 7、查看是否安装成功
 	nginx -V
 
-8、lua nginx redis (https://github.com/openresty/lua-resty-redis#installation)
-	# 下载：https://raw.githubusercontent.com/openresty/lua-resty-redis/master/lib/resty/redis.lua
-	# nginx.conf
-	    http {
-		lua_package_path "/usr/local/nginx/conf/waf/redis/?.lua";
-	    }
+8、安装redis支持
+	set-misc-nginx-module安装
+	git clone https://github.com/openresty/set-misc-nginx-module.git
+	./configure --prefix=/opt/nginx \
+             --add-module=/path/to/redis2-nginx-module
 
 	nginx_lua_redis_model安装
 	git clone https://github.com/openresty/redis2-nginx-module#installation

@@ -65,4 +65,12 @@
 	    http {
 		lua_package_path "/usr/local/nginx/conf/waf/redis/?.lua";
 	    }
+
+	nginx_lua_redis_model安装
+	git clone https://github.com/openresty/redis2-nginx-module#installation
+	./configure --prefix=/opt/nginx \
+             --add-module=/path/to/redis2-nginx-module
+
+	
+
 --]]

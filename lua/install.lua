@@ -27,6 +27,9 @@
 	make PREFIX=/usr/local/luajit
 	sudo make install
 	make install PREFIX=/usr/local/luajit
+	
+	install cjson 库(用于解析json)：
+	官网：https://www.kyne.com.au/~mark/software/lua-cjson.php
 
 2、下载devel_kit，不用安装，nginx编译用
 	wget https://github.com/simplresty/ngx_devel_kit/archive/v0.3.1rc1.tar.gz

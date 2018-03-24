@@ -30,6 +30,14 @@
 	
 	install cjson 库(用于解析json)：
 	官网：https://www.kyne.com.au/~mark/software/lua-cjson.php
+	wget https://www.kyne.com.au/~mark/software/download/lua-cjson-2.1.0.tar.gz
+	tar -zxvf lua-cjson-2.1.0.tar.gz 
+	cd  lua-cjson-2.1.0
+	make
+	make install
+	doc:
+	https://blog.csdn.net/sinat_21302587/article/details/76599786
+	http://blog.gezhiqiang.com/2017/08/24/lua-cjson/
 
 2、下载devel_kit，不用安装，nginx编译用
 	wget https://github.com/simplresty/ngx_devel_kit/archive/v0.3.1rc1.tar.gz

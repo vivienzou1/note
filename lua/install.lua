@@ -33,11 +33,12 @@
 	wget https://www.kyne.com.au/~mark/software/download/lua-cjson-2.1.0.tar.gz
 	tar -zxvf lua-cjson-2.1.0.tar.gz 
 	cd  lua-cjson-2.1.0
-	make
+	vim Makefile
+	LUA_INCLUDE_DIR = /usr/local/luajit/include/luajit-2.0
+	make 
 	make install
-	doc:
-	https://blog.csdn.net/sinat_21302587/article/details/76599786
-	http://blog.gezhiqiang.com/2017/08/24/lua-cjson/
+	chmod 755 cjson.so
+	cp cjson.so /usr/local/luajit/lib/lua/5.1/
 
 2、下载devel_kit，不用安装，nginx编译用
 	wget https://github.com/simplresty/ngx_devel_kit/archive/v0.3.1rc1.tar.gz

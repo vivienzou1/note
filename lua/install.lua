@@ -58,12 +58,11 @@
 	wget http://nginx.org/download/nginx-1.10.2.tar.gz
 	tar -zxvf nginx-1.10.2.tar.gz
 	cd nginx-1.10.2
+	编译nginx(nginx -V 获取已经安装的模块,注意 --add-module=/root/soft/ 路径)
+	./configure --user=www --group=www --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-http_v2_module --with-http_gzip_static_module --with-ipv6 --with-http_sub_module --with-openssl=/root/lnmp1.4/src/openssl-1.0.2l --with-ld-opt="-Wl,-rpath,/usr/local/luajit/lib"  --add-module=/root/soft/ngx_devel_kit --add-module=/root/soft/lua-nginx-module
 	make    //千万不要make install，不然就真的覆盖了
 	cp /usr/local/nginx/sbin/nginx /usr/local/nginx/sbin/nginx.bak
 	cp ./objs/nginx /usr/local/nginx/sbin/
-
-	编译nginx(nginx -V 获取已经安装的模块)
-	./configure --user=www --group=www --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-http_v2_module --with-http_gzip_static_module --with-ipv6 --with-http_sub_module --with-openssl=/root/lnmp1.4/src/openssl-1.0.2l --with-ld-opt="-Wl,-rpath,/usr/local/luajit/lib"  --add-module=/root/soft/ngx_devel_kit --add-module=/root/soft/lua-nginx-module
 
 6、重启nginx
 	/usr/local/nginx/sbin --启动

@@ -33,20 +33,22 @@
 	wget https://www.kyne.com.au/~mark/software/download/lua-cjson-2.1.0.tar.gz
 	tar -zxvf lua-cjson-2.1.0.tar.gz 
 	cd  lua-cjson-2.1.0
-	make
+	vim Makefile
+	LUA_INCLUDE_DIR = /usr/local/luajit/include/luajit-2.0
+	make 
 	make install
-	doc:
-	https://blog.csdn.net/sinat_21302587/article/details/76599786
-	http://blog.gezhiqiang.com/2017/08/24/lua-cjson/
+	chmod 755 cjson.so
+	cp cjson.so /usr/local/luajit/lib/lua/5.1/
 
 2、下载devel_kit，不用安装，nginx编译用
 	wget https://github.com/simplresty/ngx_devel_kit/archive/v0.3.1rc1.tar.gz
 	tar -zxvf v0.3.1rc1.tar.gz
-
+	mv ngx_devel_kit-0.3.1rc1/ ngx_devel_kit
 
 3、下载ngx_lua模块(不用安装nginx编译用)
 	wget https://github.com/openresty/lua-nginx-module/archive/v0.10.12rc2.tar.gz
 	tar -zxvf v0.10.12rc2.tar.gz
+	mv lua-nginx-module-0.10.12rc2/ lua-nginx-module
 
 4、告诉nginx编译系统在哪里找到LuaJIT
 	export LUAJIT_LIB=/usr/local/luajit/lib
@@ -56,12 +58,11 @@
 	wget http://nginx.org/download/nginx-1.10.2.tar.gz
 	tar -zxvf nginx-1.10.2.tar.gz
 	cd nginx-1.10.2
-
-编译nginx
-./configure --prefix=/usr/local/nginx \
-         --with-ld-opt="-Wl,-rpath,/usr/local/luajit/lib" \
-         --add-module=/root/soft/ngx_devel_kit \
-         --add-module=/root/soft/lua-nginx-module
+	编译nginx(nginx -V 获取已经安装的模块,注意 --add-module=/root/soft/ 路径)
+	./configure --user=www --group=www --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-http_v2_module --with-http_gzip_static_module --with-ipv6 --with-http_sub_module --with-openssl=/root/lnmp1.4/src/openssl-1.0.2l --with-ld-opt="-Wl,-rpath,/usr/local/luajit/lib"  --add-module=/root/soft/ngx_devel_kit --add-module=/root/soft/lua-nginx-module
+	make    //千万不要make install，不然就真的覆盖了
+	cp /usr/local/nginx/sbin/nginx /usr/local/nginx/sbin/nginx.bak
+	cp ./objs/nginx /usr/local/nginx/sbin/
 
 6、重启nginx
 	/usr/local/nginx/sbin --启动

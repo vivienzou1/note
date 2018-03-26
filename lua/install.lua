@@ -48,7 +48,7 @@
 3、下载ngx_lua模块(不用安装nginx编译用)
 	wget https://github.com/openresty/lua-nginx-module/archive/v0.10.12rc2.tar.gz
 	tar -zxvf v0.10.12rc2.tar.gz
-	mv lua-nginx-module-0.10.12rc2/ lua-nginx-modul
+	mv lua-nginx-module-0.10.12rc2/ lua-nginx-module
 
 4、告诉nginx编译系统在哪里找到LuaJIT
 	export LUAJIT_LIB=/usr/local/luajit/lib

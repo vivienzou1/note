@@ -43,11 +43,12 @@
 2、下载devel_kit，不用安装，nginx编译用
 	wget https://github.com/simplresty/ngx_devel_kit/archive/v0.3.1rc1.tar.gz
 	tar -zxvf v0.3.1rc1.tar.gz
-
+	mv ngx_devel_kit-0.3.1rc1/ ngx_devel_kit
 
 3、下载ngx_lua模块(不用安装nginx编译用)
 	wget https://github.com/openresty/lua-nginx-module/archive/v0.10.12rc2.tar.gz
 	tar -zxvf v0.10.12rc2.tar.gz
+	mv lua-nginx-module-0.10.12rc2/ lua-nginx-modul
 
 4、告诉nginx编译系统在哪里找到LuaJIT
 	export LUAJIT_LIB=/usr/local/luajit/lib

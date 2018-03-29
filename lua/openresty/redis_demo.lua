@@ -1,4 +1,4 @@
--- redis 操作
+-- redis 操作(参考 https://github.com/openresty/lua-resty-redis/blob/master/README.markdown#redis-authentication)
 local redis = require "resty.redis"
 local red = redis:new()
 red:set_timeout(2000) -- 2 sec

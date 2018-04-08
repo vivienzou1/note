@@ -33,5 +33,11 @@ func main() {
 	//将标准日期转为时间戳，第一个参数是模板格式(值不能变)，第二个是要转换的时间字符串
 	tm2, _ := time.Parse("2006-01-02 15:04:05", "2017-04-14 15:51:02")
 	fmt.Println(tm2.Unix())
+	
+	//计算两个时间的差，AddDate(年,月,日),正：+，负：-
+	tm := time.Now().AddDate(1, -1, -1)
+	date := tm.Format("2006-01-02")
+	date2 := tm.Format("2006-01-02 15:04:05")
+	fmt.Println(date, date2)
 
 }

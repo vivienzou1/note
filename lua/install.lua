@@ -85,3 +85,7 @@
 --]]
 启用jit
 启用PCRE JIT编译, 需要PCRE 8.21+ 支持，并且必须在编译时加上选项--enable-jit
+
+<br>
+正则参数说明：
+https://blog.csdn.net/weiyuefei/article/details/38439017

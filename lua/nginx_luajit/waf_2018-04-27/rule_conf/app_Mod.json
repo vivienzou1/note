@@ -1,8 +1,0 @@
-[
-    {
-        "state": "on",
-        "action": ["deny"],
-        "hostname": ["127.0.0.1",""],
-        "uri": ["/shop/api","jio"]
-    },
-]
